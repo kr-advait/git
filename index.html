@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Git Practice</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.container{
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			h1{
+				margin-top: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<input id="textInput" type="text">
+			<br />
+			<h1 id="textOutput"></h1>
+		</div>
+		<script>
+			$(document).ready(function() {
+  			$('#textInput').keyup(function() {
+   				document.getElementById("textOutput").innerHTML = ($('#textInput').val());
+  			}) // end keypress
+			});
+
+		</script>
+	</body>
+</html>
